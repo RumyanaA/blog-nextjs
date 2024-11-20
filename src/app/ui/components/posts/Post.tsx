@@ -1,4 +1,4 @@
-import React, { JSX } from 'react';
+import React from 'react';
 
 export default function Component({ id, title, content, date }: { id: string, title: string, content: string, date: string }) {
     return (
