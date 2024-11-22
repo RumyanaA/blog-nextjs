@@ -22,3 +22,12 @@ export async function getPosts() {
     console.error("Error while getting posts: ", error);
   }
 }
+
+export async function getPost(id: string) {
+  try {
+    const data = await sql`SELECT * FROM posts WHERE id=${id}`;
+    return data.rows[0];
+  } catch (error) {
+    console.error("Error while getting posts: ", error);
+  }
+}
