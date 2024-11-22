@@ -16,7 +16,7 @@ export async function connectToDB() {
 
 export async function getPosts() {
   try {
-    const data = await sql`SELECT * FROM posts LIMIT 4`;
+    const data = await sql`SELECT * FROM posts`;
     return data.rows;
   } catch (error) {
     console.error("Error while getting posts: ", error);
